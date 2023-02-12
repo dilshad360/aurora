@@ -4,6 +4,7 @@ import backendUrl from "../const/backendUrl";
 import GroupCard from "../components/GroupCard";
 import { ListHeader, HomeWrapper } from "../styles/HomeStyle";
 import IndividualCard from "../components/IndividualCard";
+import { motion } from "framer-motion"
 
 
 const base = new Airtable({ apiKey: `${backendUrl.secretKey}` }).base(
@@ -67,8 +68,12 @@ function Home() {
       <div>
         <ListHeader>Team Rank</ListHeader>
         { groups.length ? (<>
-        { groups.map((group ,index) => (  
-            <GroupCard group={group} index={index}/>
+        { groups.map((group ,index) => ( 
+          <motion.div initial={{ opacity: 0, scale: 0.5 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.5 }}>
+          <GroupCard group={group} index={index}/>
+          </motion.div>
           ))}
           </>
         ):(<>Loading...</>)
@@ -78,9 +83,11 @@ function Home() {
         <ListHeader>Individual Rank</ListHeader>
         { individuals.length ? (<>
         { individuals.map((individual ,index) => ( 
-          <>
+          <motion.div initial={{ opacity: 0, scale: 0.5 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.8 }}>
             <IndividualCard individual={individual} index={index}/>
-          </>
+          </motion.div>
           ))}
           </>
         ):(<>Loading...</>)
