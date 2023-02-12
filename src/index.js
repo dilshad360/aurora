@@ -3,7 +3,8 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import { HashRouter } from 'react-router-dom';
 import App from './App';
-import NavBar from './pages/NavBar';
+import NavBar from './components/NavBar';
+import Footer from './components/Footer';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -11,6 +12,7 @@ root.render(
     <HashRouter>
     <NavBar/>
     <App />
+    <Footer/>
     </HashRouter>
   </React.StrictMode>
 );

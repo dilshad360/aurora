@@ -1,12 +1,12 @@
 import './App.css';
-import GroupRanking from './pages/Home';
+import Home from './pages/Home';
 import { Routes, Route } from 'react-router-dom';
 
 function App() {
   return (
     <div className="App">
     <Routes>
-      <Route path='/' element={<GroupRanking/>} />
+      <Route path='/' element={<Home/>} />
     </Routes>
     </div>
   );
