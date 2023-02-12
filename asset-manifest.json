@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/aurora-leaderboard/static/css/main.f1515fba.css",
-    "main.js": "/aurora-leaderboard/static/js/main.2b2005e3.js",
+    "main.js": "/aurora-leaderboard/static/js/main.ee5dac5a.js",
     "static/media/star.png": "/aurora-leaderboard/static/media/star.97d9f85f7d1b106f1afe.png",
     "index.html": "/aurora-leaderboard/index.html",
     "main.f1515fba.css.map": "/aurora-leaderboard/static/css/main.f1515fba.css.map",
-    "main.2b2005e3.js.map": "/aurora-leaderboard/static/js/main.2b2005e3.js.map"
+    "main.ee5dac5a.js.map": "/aurora-leaderboard/static/js/main.ee5dac5a.js.map"
   },
   "entrypoints": [
     "static/css/main.f1515fba.css",
-    "static/js/main.2b2005e3.js"
+    "static/js/main.ee5dac5a.js"
   ]
 }
