@@ -1,10 +1,12 @@
-import React from 'react'
+import React from 'react';
+import Banner from '../assets/Aurora.png'
+import { HeaderWrapper } from '../styles/NavBarStyle';
 
 function NavBar() {
   return (
-    <nav>
-      <img width={100} src="" alt="" />
-    </nav>
+    <HeaderWrapper>
+      <img src={Banner} alt="" />
+    </HeaderWrapper>
   )
 }
 
