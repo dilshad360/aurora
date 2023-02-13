@@ -66,7 +66,7 @@ function Home() {
   return (
     <HomeWrapper>
       <div>
-        <ListHeader>Team Rank</ListHeader>
+        <ListHeader>Team Leaderboard</ListHeader>
         { groups.length ? (<>
         { groups.map((group ,index) => ( 
           <motion.div initial={{ opacity: 0, scale: 0.5 }}
@@ -76,11 +76,14 @@ function Home() {
           </motion.div>
           ))}
           </>
-        ):(<>Loading...</>)
+        ):(<motion.div animate={{
+          scale: [1, 2, 2, 1, 1],
+          rotate: [0, 0, 270, 270, 0],
+        }}>🕛</motion.div>)
         }
         </div>
         <div>
-        <ListHeader>Individual Rank</ListHeader>
+        <ListHeader>Individual Leaderboard</ListHeader>
         { individuals.length ? (<>
         { individuals.map((individual ,index) => ( 
           <motion.div initial={{ opacity: 0, scale: 0.5 }}
@@ -90,7 +93,10 @@ function Home() {
           </motion.div>
           ))}
           </>
-        ):(<>Loading...</>)
+        ):(<motion.div animate={{
+          scale: [1, 2, 2, 1, 1],
+          rotate: [0, 0, 270, 270, 0],
+        }}>🕛</motion.div>)
         }
         </div>
     </HomeWrapper>
