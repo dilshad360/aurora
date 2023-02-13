@@ -5,6 +5,7 @@ import GroupCard from "../components/GroupCard";
 import { ListHeader, HomeWrapper } from "../styles/HomeStyle";
 import IndividualCard from "../components/IndividualCard";
 import { motion } from "framer-motion"
+import Loader from "../components/Loader";
 
 
 const base = new Airtable({ apiKey: `${backendUrl.secretKey}` }).base(
@@ -76,10 +77,7 @@ function Home() {
           </motion.div>
           ))}
           </>
-        ):(<motion.div animate={{
-          scale: [1, 2, 2, 1, 1],
-          rotate: [0, 0, 270, 270, 0],
-        }}>🕛</motion.div>)
+        ):(<Loader/>)
         }
         </div>
         <div>
@@ -93,10 +91,7 @@ function Home() {
           </motion.div>
           ))}
           </>
-        ):(<motion.div animate={{
-          scale: [1, 2, 2, 1, 1],
-          rotate: [0, 0, 270, 270, 0],
-        }}>🕛</motion.div>)
+        ):(<Loader/>)
         }
         </div>
     </HomeWrapper>
