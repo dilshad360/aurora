@@ -54,7 +54,7 @@ export const TeamCard = styled.div`
         left: 3rem;
     }
     img{
-        width: 40px;
+        width: 50px;
     }
   }
 `
@@ -123,7 +123,7 @@ export const IndividualCardStyle = styled.div`
         padding: 0.1rem .3rem 0.1rem .3rem;
     }
     img{
-        width: 40px;
+        width: 50px;
     }
 }
 `
