@@ -4,9 +4,9 @@ import { motion } from 'framer-motion';
 function Loader() {
   return (
     <motion.div animate={{
-        scale: [1, 2, 2, 1, 1],
-        rotate: [0, 0, 270, 270, 0],
+        rotate: [0, 0, 160, 240, 360],
       }}
+      transition={{ repeat: Infinity  }}
       >🕛</motion.div>
   )
 }
