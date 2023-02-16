@@ -127,3 +127,20 @@ export const IndividualCardStyle = styled.div`
     }
 }
 `
+
+export const IndividualCardWrapper = styled.div`
+    background: white;
+    padding: .6rem 0 2rem 0;
+    border-radius: 1rem;
+    margin: 3rem 1rem 3rem 1rem;
+    box-shadow: rgba(17, 17, 26, 0.1) 0px 1px 0px, rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 48px;
+    
+`
+
+export const IndividualRecord = styled.div`
+        display: flex;
+        justify-content: space-between;
+    p{
+        flex: 1;
+    }
+`

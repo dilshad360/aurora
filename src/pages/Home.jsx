@@ -67,7 +67,7 @@ function Home() {
   return (
     <HomeWrapper>
       <div>
-        <ListHeader>Team Leaderboard</ListHeader>
+        <ListHeader>Team</ListHeader>
         { groups.length ? (<>
         { groups.map((group ,index) => ( 
           <motion.div initial={{ opacity: 0, scale: 0.5 }}
@@ -81,8 +81,7 @@ function Home() {
         }
         </div>
         <div>
-        <ListHeader>Individual Leaderboard</ListHeader>
-        { individuals.length ? (<>
+        {/* { individuals.length ? (<>
         { individuals.map((individual ,index) => ( 
           <motion.div initial={{ opacity: 0, scale: 0.5 }}
           animate={{ opacity: 1, scale: 1 }}
@@ -92,7 +91,8 @@ function Home() {
           ))}
           </>
         ):(<Loader/>)
-        }
+        } */}
+        <IndividualCard individuals={individuals}/>
         </div>
     </HomeWrapper>
   )

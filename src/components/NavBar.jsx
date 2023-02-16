@@ -1,11 +1,16 @@
 import React from 'react';
-import Banner from '../assets/Aurora.png'
+import { Link } from 'react-router-dom';
+import Banner from '../assets/aurora.png'
 import { HeaderWrapper } from '../styles/NavBarStyle';
 
 function NavBar() {
   return (
     <HeaderWrapper>
-      <img src={Banner} alt="" />
+      <img src={Banner} alt="banner" />
+      {/* <nav>
+      <Link to={`/`}>Leaderboard</Link>
+      <Link to={`/result`}>Results</Link>
+      </nav> */}
     </HeaderWrapper>
   )
 }

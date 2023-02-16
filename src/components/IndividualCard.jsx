@@ -1,22 +1,30 @@
 import React from 'react'
-import { IndividualCardStyle } from '../styles/CardStyle'
-import Star from "../assets/star.png";
+import { IndividualCardWrapper, IndividualRecord } from '../styles/CardStyle'
+import Loader from './Loader'
+import { motion } from 'framer-motion'
 
-function IndividualCard({ individual, index }) {
+function IndividualCard({individuals}) {
   return (
-    <IndividualCardStyle>
-        <h3>{index + 1}</h3>
-      <div>
-        <h1>{individual.fields.Name}</h1>  
-        <h2>{individual.fields.Department}</h2>
-        <h4>{individual.fields.Year} year</h4>
-      </div>
-      {index === 0 && <img src={Star} alt="STAR" />}
-      <h1>
-        {individual.fields.Points}
-        <span> pts</span>
-      </h1>
-    </IndividualCardStyle>
+    <IndividualCardWrapper>
+        <h2>Individual</h2>
+        { individuals.length ? (<>
+        { individuals.map((individual ,index) => ( 
+          <motion.div initial={{ opacity: 0, scale: 0.5 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.8 }}>
+            <IndividualRecord>
+            <p>{index + 1}</p>
+            <p>{individual.fields.Name}</p>
+            <p>{individual.fields.Department}</p>
+            <p>{individual.fields.Year} yr</p>
+            <p>{individual.fields.Points} pts</p>
+            </IndividualRecord>
+          </motion.div>
+          ))}
+          </>
+        ):(<Loader></Loader>)
+        }
+    </IndividualCardWrapper>
   )
 }
 
