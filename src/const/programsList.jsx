@@ -7,7 +7,7 @@ const programs =
             value: "Cartoon"
         },
         {
-            value: "Cartoon 2"
+            value: "Poster making"
         },
         
     ]

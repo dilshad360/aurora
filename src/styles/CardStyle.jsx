@@ -11,6 +11,7 @@ export const TeamCard = styled.div`
     padding: 2rem 4rem 2rem 4rem;
     border-radius: 1rem;
     box-shadow: rgba(0, 0, 0, 0.18) 0px 2px 4px;
+    color: ${props => props.inputColor || "palevioletred"};
     h3{
         position: absolute;
         left: 5rem;

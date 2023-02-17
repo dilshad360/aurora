@@ -9,7 +9,7 @@ function NavBar() {
       <img src={Banner} alt="banner" />
       <nav>
       <Link to={`/`}>Leaderboard</Link>
-      {/* <Link to={`/result`}>Results</Link> */}
+      {/* <Link to={`/results`}>Results</Link> */}
       </nav>
     </HeaderWrapper>
   )
