@@ -4,7 +4,7 @@ import Star from "../assets/star.png";
 
 function GroupCard({ group, index }) {
   return (
-    <TeamCard>
+    <TeamCard inputColor={group.fields.color} >
       <h3>{index + 1}</h3>
       <div>
         <h1>{group.fields.Team}</h1>
