@@ -9,7 +9,7 @@ function IndividualCard({individuals}) {
         { individuals.length ? (<>
         { individuals.map((individual ,index) => (   
             <IndividualRecord key={individual.id}>
-            <p>{index + 1}</p>
+            <p><b>{index + 1}</b></p>
             <p><b>{individual.fields.Name}</b></p>
             <p>{individual.fields.Department}</p>
             <p>{individual.fields.Year} yr</p>
