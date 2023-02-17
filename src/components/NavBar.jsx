@@ -7,10 +7,10 @@ function NavBar() {
   return (
     <HeaderWrapper>
       <img src={Banner} alt="banner" />
-      {/* <nav>
+      <nav>
       <Link to={`/`}>Leaderboard</Link>
-      <Link to={`/result`}>Results</Link>
-      </nav> */}
+      {/* <Link to={`/result`}>Results</Link> */}
+      </nav>
     </HeaderWrapper>
   )
 }

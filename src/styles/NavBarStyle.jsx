@@ -2,15 +2,16 @@ import styled from "styled-components";
 
 export const HeaderWrapper = styled.div`
  display: flex;
- justify-content: center;
+ justify-content: space-between;
  align-items: center;
- flex-direction: column;
- padding: 1rem 0 0 0;
+ flex-direction: row;
+ padding: 3rem 18rem 0 18rem;
+ margin-bottom: 3rem;
+ 
  img{
-    width: 140px;
+    width: 16%;
  }
  nav{
-   margin-top: 3rem;
    display: flex;
    justify-content: center;
  }
@@ -19,10 +20,25 @@ export const HeaderWrapper = styled.div`
    margin: 0 2rem 0 2rem;
    color: #67250f;
    text-decoration: none;
-   font-weight: 300;
+   font-weight: 600;
    &:hover {
-      font-weight: 500;
+    text-decoration: underline;
     }
  }
+ @media (max-width: 1024px) {
+  padding:  2rem 2rem 0 2rem;
+  font-size: 1rem;
+  margin: 0 1rem 0 1rem;
+  }
+  @media (max-width: 768px) {
+    padding:  2rem 1rem 0 1rem;
+    img{
+    width: 24%;
+ }
+    a{
+      font-size: 1rem;
+      margin: 0 1rem 0 1rem;
+    }
+    }
 
 `
