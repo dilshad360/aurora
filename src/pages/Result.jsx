@@ -1,9 +1,10 @@
 import React from 'react'
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import Airtable from 'airtable';
 import backendUrl from '../const/backendUrl';
 import programs from '../const/programsList';
 import { ResultWrapper } from '../styles/ResultStyle';
+import { ListHeader } from '../styles/HomeStyle';
 
 function Result() {
 
@@ -13,10 +14,6 @@ function Result() {
 
     const [result, setResult] = useState([]);
 
-
-    useEffect(() => {
-        // getPrograms();
-      }, []);
 
       const getPrograms = async (search) => {  
         base("Result")
@@ -38,7 +35,7 @@ function Result() {
 
   return (
     <ResultWrapper>
-    <h2>Result</h2>
+    <ListHeader>Result</ListHeader>
     <select onChange={(e)=>{getPrograms(e.target.value)}}>
         <option>Select program</option>
         {programs.map((program) => (
