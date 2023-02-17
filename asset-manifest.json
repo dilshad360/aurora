@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/aurora/static/css/main.f1515fba.css",
-    "main.js": "/aurora/static/js/main.29c331d2.js",
+    "main.js": "/aurora/static/js/main.a6d8905e.js",
     "static/media/star.png": "/aurora/static/media/star.97d9f85f7d1b106f1afe.png",
     "static/media/aurora.png": "/aurora/static/media/aurora.650cfc857b6f60cbc33d.png",
     "index.html": "/aurora/index.html",
     "main.f1515fba.css.map": "/aurora/static/css/main.f1515fba.css.map",
-    "main.29c331d2.js.map": "/aurora/static/js/main.29c331d2.js.map"
+    "main.a6d8905e.js.map": "/aurora/static/js/main.a6d8905e.js.map"
   },
   "entrypoints": [
     "static/css/main.f1515fba.css",
-    "static/js/main.29c331d2.js"
+    "static/js/main.a6d8905e.js"
   ]
 }
