@@ -1,13 +1,16 @@
 const programs =
     [
         {
-            value: "Pencil drawing"
+            value: "Videography"
         },
         {
-            value: "Cartoon"
+            value: "Photography"
         },
         {
-            value: "Poster making"
+            value: "English speech"
+        },
+        {
+            value: "Hindi speech"
         },
         
     ]
