@@ -77,4 +77,7 @@ export const IndividualRecord = styled.div`
     p{
         flex: 1;
     }
+    p span{
+        font-size: small;
+    }
 `
