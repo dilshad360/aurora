@@ -74,10 +74,18 @@ export const IndividualCardWrapper = styled.div`
 export const IndividualRecord = styled.div`
         display: flex;
         justify-content: space-between;
+        align-items: center;
+        border: solid #67250f11 .1rem;
+        margin: .6rem 1rem .6rem 1rem;
+        border-radius: 1rem;
     p{
         flex: 1;
+        font-size: 1.2rem;
     }
     p span{
-        font-size: small;
+        display: block;
+        color: #67250fa4;
+        margin-top: .2rem;
+        font-size: 0.8rem;
     }
 `
