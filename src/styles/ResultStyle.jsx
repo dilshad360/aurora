@@ -1,15 +1,19 @@
 import styled from "styled-components";
 
 export const ResultWrapper = styled.div`
-padding: 0 18rem 0 18rem;
-   
-  select {
+
+  padding: 0 18rem 0 18rem;
+
+  input{
     padding: .5rem 1rem .5rem 1rem;
     border: 1px solid #999;
     font-size: 16px;
     color: #67250f;
     border-radius: 5px;
+    width: 50%;
+    margin-bottom: .1rem;
   }
+
   @media (max-width: 1024px) {
         padding: 0;
     }
@@ -50,4 +54,23 @@ export const ResultCardWrapper = styled.div`
       width: 18%;
     }
     }
+`;
+
+export const SearchAutoWrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 10rem;
+  overflow: auto;
+
+  button{
+    padding: .5rem 1rem .5rem 1rem;
+    border: 1px solid #e7e7e7;
+    background: white;
+    font-size: 1rem;
+    border-radius: 5px;
+    width: 54%;
+    margin-bottom: .2rem;
+    cursor: pointer;
+  }
 `;
