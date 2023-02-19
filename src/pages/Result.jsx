@@ -4,7 +4,7 @@ import Airtable from 'airtable';
 import backendUrl from '../const/backendUrl';
 import programs from '../const/programsList';
 import { ResultWrapper } from '../styles/ResultStyle';
-import { HomeWrapper, ListHeader } from '../styles/HomeStyle';
+import { ListHeader } from '../styles/HomeStyle';
 import ResultCard from '../components/ResultCard';
 
 function Result() {
@@ -34,8 +34,6 @@ function Result() {
      };
 
   return (
-    <HomeWrapper>
-
     <ResultWrapper>
     <ListHeader>Result</ListHeader>
     <select onChange={(e)=>{getPrograms(e.target.value)}}>
@@ -52,7 +50,6 @@ function Result() {
         ):(<></>)
       }
     </ResultWrapper>
-    </HomeWrapper>
   )
 }
 

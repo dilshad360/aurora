@@ -4,6 +4,7 @@ export const FooterWrapper = styled.div`
  display: flex;
  justify-content: center;
  padding: 1rem 0 1rem 0;
+ opacity: 70%;
  h6{
     font-size: 0.8rem;
  }
