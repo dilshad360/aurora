@@ -10,9 +10,7 @@ function IndividualCard({individuals}) {
         { individuals.map((individual ,index) => (   
             <IndividualRecord key={individual.id}>
             <p><b>{index + 1}</b></p>
-            <p><b>{individual.fields.Name}</b></p>
-            <p><span>{individual.fields.Department}</span></p>
-            <p><span>{individual.fields.Year} yr</span></p>
+            <p><b>{individual.fields.Name}</b><span>{individual.fields.Department}</span><span>{individual.fields.Year} yr</span></p>
             <p><b>{individual.fields.Points} pts</b></p>
             </IndividualRecord>
           ))}
