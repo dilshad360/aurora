@@ -3,6 +3,7 @@ import styled from "styled-components";
 export const ResultWrapper = styled.div`
 
   padding: 0 18rem 0 18rem;
+  height: 90vh;
 
   input{
     padding: .5rem 1rem .5rem 1rem;
@@ -83,6 +84,7 @@ export const SearchAutoWrapper = styled.div`
     padding: .5rem 1rem .5rem 1rem;
     border: 1px solid #e7e7e7;
     background: white;
+    color: #67250f;
     font-size: 1rem;
     border-radius: 5px;
     width: 54%;

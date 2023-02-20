@@ -67,7 +67,7 @@ function Home() {
   return (
     <HomeWrapper>
       <div>
-        <ListHeader>Team</ListHeader>
+        <ListHeader>TEAM</ListHeader>
         { groups.length ? (<>
         { groups.map((group ,index) => ( 
           <motion.div key={group.id} initial={{ opacity: 0, scale: 0.5 }}

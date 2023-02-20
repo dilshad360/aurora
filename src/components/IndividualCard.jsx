@@ -5,7 +5,7 @@ import Loader from './Loader'
 function IndividualCard({individuals}) {
   return (
     <IndividualCardWrapper>
-        <h2>Individual</h2>
+        <h2>INDIVIDUAL</h2>
         { individuals.length ? (<>
         { individuals.map((individual ,index) => (   
             <IndividualRecord key={individual.id}>
