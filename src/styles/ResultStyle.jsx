@@ -32,30 +32,35 @@ export const ResultCardWrapper = styled.div`
     justify-content: space-around;
     align-items: center;
     background-color: #ffff;
-    margin: 1rem 1rem 3.5rem 1rem;
-    padding: 1rem 1rem 1rem 10rem;
+    margin: 1rem 1rem 1rem 1rem;
+    padding: 1rem 1rem 1rem 1rem;
     border-radius: 1rem;
     box-shadow: rgba(0, 0, 0, 0.18) 0px 2px 4px;
-
-    >* {
-      flex: 1;
+    h2{
+      font-size: 2rem;
+      margin: 0;
     }
+
 
     img{
       position: absolute;
-      width: 14%;
+      width: 10%;
       left: 2%;
       top: 8%;
     }
 
+    p{
+      font-size: 0.8rem;
+      margin: .3rem 0 0 0;
+    }
+
     @media (max-width: 768px) {
-    padding: 1rem 1rem 1rem 5rem;
-    margin: .5rem 1rem .5rem 1rem;
+    margin: 1rem 1rem 1rem 1rem;
     h2{
-      font-size: 1rem;
+      font-size: 1.2rem;
     }
     img{
-      width: 18%;
+      width: 22%;
     }
     }
 `;
