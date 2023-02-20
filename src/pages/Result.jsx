@@ -65,7 +65,7 @@ function Result() {
 
   return (
     <ResultWrapper>
-      <ListHeader>Result</ListHeader>
+      <ListHeader>RESULT</ListHeader>
 
       <input
         placeholder="Search"

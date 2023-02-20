@@ -63,7 +63,7 @@ export const TeamCard = styled.div`
 
 export const IndividualCardWrapper = styled.div`
     background: white;
-    padding: .6rem 0 2rem 0;
+    padding: .6rem 0 .6rem 0;
     border-radius: 1rem;
     margin: 3rem 1rem 3rem 1rem;
     box-shadow: rgba(0, 0, 0, 0.18) 0px 2px 4px;
