@@ -12,6 +12,7 @@ export const ResultWrapper = styled.div`
     border-radius: 5px;
     width: 50%;
     margin-bottom: .1rem;
+    box-shadow: rgba(0, 0, 0, 0.18) 0px 2px 4px;
   }
 
   @media (max-width: 1024px) {
@@ -19,6 +20,9 @@ export const ResultWrapper = styled.div`
     }
     @media (max-width: 768px) {
         padding: 0;
+        input{
+          width: 80%;
+        }
     }
 `;
 
@@ -61,7 +65,14 @@ export const SearchAutoWrapper = styled.div`
   flex-direction: column;
   align-items: center;
   height: 10rem;
-  overflow: auto;
+  overflow-y: scroll;
+  
+
+  ::-webkit-scrollbar{
+    display: none;
+  }
+
+  
 
   button{
     padding: .5rem 1rem .5rem 1rem;
@@ -72,5 +83,11 @@ export const SearchAutoWrapper = styled.div`
     width: 54%;
     margin-bottom: .2rem;
     cursor: pointer;
+  }
+
+  @media (max-width: 768px) {
+    button{
+      width: 86%;
+    }
   }
 `;
