@@ -1,6 +1,6 @@
 import React from 'react'
 import { IndividualCardWrapper, IndividualRecord } from '../styles/CardStyle'
-import Loader from './Loader'
+import Loader from './common/Loader'
 
 function IndividualCard({individuals}) {
   return (

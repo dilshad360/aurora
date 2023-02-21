@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import Banner from '../assets/aurora.png'
-import { HeaderWrapper } from '../styles/NavBarStyle';
+import Banner from '../../assets/aurora.png'
+import { HeaderWrapper } from '../../styles/NavBarStyle';
 
 function NavBar() {
   return (

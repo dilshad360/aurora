@@ -6,7 +6,7 @@ import { ResultWrapper, SearchAutoWrapper } from "../styles/ResultStyle";
 import { ListHeader } from "../styles/HomeStyle";
 import ResultCard from "../components/ResultCard";
 import { motion } from "framer-motion";
-import Loader from "../components/Loader";
+import Loader from "../components/common/Loader";
 
 function Result() {
   const base = new Airtable({ apiKey: `${backendUrl.secretKey}` }).base(
@@ -75,7 +75,6 @@ function Result() {
       ></input>
 
       <SearchAutoWrapper>
-
         {
           programList.length ? (<>{
             programList
@@ -99,11 +98,9 @@ function Result() {
                   {program.fields.Name}
                 </button>
               ))
-          }</>) : (<Loader/>)
+          }
+          </>) : (<Loader/>)
         }
-
-
-        
       </SearchAutoWrapper>
 
       {heading && <h1>{heading}</h1>}
@@ -122,7 +119,11 @@ function Result() {
           ))}
         </>
       ) : (
-        <>👆🏻</>
+        <motion.div
+    animate={{
+      scale: [1, 2, 3, 2, 1],
+    }}
+  >👆🏻</motion.div>
       )}
     </ResultWrapper>
   );
