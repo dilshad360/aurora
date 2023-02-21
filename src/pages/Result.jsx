@@ -99,9 +99,11 @@ function Result() {
                 </button>
               ))
           }
+          
           </>) : (<Loader/>)
         }
       </SearchAutoWrapper>
+        <p><i>{programList.length} results published</i></p>  
 
       {heading && <h1>{heading}</h1>}
 
