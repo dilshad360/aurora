@@ -16,6 +16,16 @@ export const ResultWrapper = styled.div`
     box-shadow: rgba(0, 0, 0, 0.18) 0px 2px 4px;
   }
 
+  p{
+    margin: .5rem 0 .5rem 0;
+  }
+
+  p i{
+    opacity: 50%;
+    font-size: .8rem;
+  }
+
+
   @media (max-width: 1024px) {
         padding: 0;
     }
