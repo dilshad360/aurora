@@ -6,6 +6,7 @@ import { ListHeader, HomeWrapper } from "../styles/HomeStyle";
 import IndividualCard from "../components/IndividualCard";
 import { motion } from "framer-motion";
 import Loader from "../components/common/Loader";
+// import ConfettiExplosion from 'react-confetti-explosion';
 
 const base = new Airtable({ apiKey: `${backendUrl.secretKey}` }).base(
   `${backendUrl.airtableBase}`
@@ -67,6 +68,7 @@ function Home() {
         <ListHeader>TEAM</ListHeader>
         {groups.length ? (
           <>
+         {/* <center><ConfettiExplosion /></center>  */}
             {groups.map((group, index) => (
               <motion.div
                 key={group.id}

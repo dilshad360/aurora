@@ -12,7 +12,9 @@ function ResultCard({result, index}) {
         { result.fields.Place === "Thrid" &&  <img src={ThirdMedal} alt="thirdmedal" />}
         <div>
         <h2>{result.fields.Name}</h2> 
-        { result.fields.Department != "GROUP" &&
+        { 
+        // eslint-disable-next-line eqeqeq
+        result.fields.Department != "GROUP" &&
         <p>{result.fields.Department}&nbsp;&nbsp;{result.fields.Year} yr</p>
         }
         </div>
