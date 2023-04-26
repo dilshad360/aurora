@@ -9,7 +9,7 @@ function ResultCard({result, index}) {
     <ResultCardWrapper>  
         { result.fields.Place === "First"   && <img src={FirstMedal} alt="firstmedal" />}
         { result.fields.Place === "Second"  && <img src={SecondMedal} alt="secondmedal" />}
-        { result.fields.Place === "Thrid" &&  <img src={ThirdMedal} alt="thirdmedal" />}
+        { result.fields.Place === "Third" &&  <img src={ThirdMedal} alt="thirdmedal" />}
         <div>
         <h2>{result.fields.Name}</h2> 
         { 
