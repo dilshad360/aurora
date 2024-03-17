@@ -1,13 +1,11 @@
 import React from 'react';
-import { motion } from 'framer-motion';
+import Tea from '../../assets/tea.gif'
 
 function Loader() {
   return (
-    <motion.div animate={{
-        rotate: [0, 0, 160, 240, 360],
-      }}
-      transition={{ repeat: Infinity  }}
-      >🕛</motion.div>
+    <>
+          <img src={Tea} width={100} alt="loading" />
+    </>
   )
 }
 

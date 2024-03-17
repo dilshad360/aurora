@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import Banner from '../../assets/aurora.png'
+import Banner from '../../assets/Aurora.png'
 import { HeaderWrapper } from '../../styles/NavBarStyle';
 
 function NavBar() {
