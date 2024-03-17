@@ -1,17 +1,14 @@
 import React from "react";
 import { useState, useEffect } from "react";
-import Airtable from "airtable";
-import backendUrl from "../const/backendUrl";
 import { ResultWrapper, SearchAutoWrapper } from "../styles/ResultStyle";
 import { ListHeader } from "../styles/HomeStyle";
 import ResultCard from "../components/ResultCard";
 import { motion } from "framer-motion";
 import Loader from "../components/common/Loader";
+import { fetchRecords } from "../utils/airtableService";
 
 function Result() {
-  const base = new Airtable({ apiKey: `${backendUrl.secretKey}` }).base(
-    `${backendUrl.airtableBase}`
-  );
+
 
   const [result, setResult] = useState([]);
   const [programList, setProgramList] = useState([]);
@@ -19,48 +16,53 @@ function Result() {
   const [heading, setHeading] = useState("");
 
   const getPrograms = async (search) => {
-    base("Result")
-      .select({
-        view: "Programs",
-        filterByFormula: `({Program} = '${search}')`,
-      })
-      .eachPage(
-        (records, fetchNextPage) => {
-          setResult(records);
-          setHeading(search);
-          fetchNextPage();
-        },
-        function done(err) {
-          if (err) {
-            console.error(err);
-            return;
-          }
-        }
+
+    try {
+      const tableName = "Result";
+      const filterBy = `{Program} = '${search}'`;
+      const maxRecords = "";
+      const sortField = "Point";
+      const sortDirection = "asc";
+      const records = await fetchRecords(
+        tableName,
+        filterBy,
+        sortField,
+        sortDirection,
+        maxRecords
       );
+      setResult(records);
+      setHeading(search);
+    } catch (error) {
+      console.error(error);
+    }
+
   };
 
   const getProgramsList = async (search) => {
-    base("Published Programs")
-      .select({
-        view: "Grid view",
-      })
-      .eachPage(
-        (records, fetchNextPage) => {
-          setProgramList(records)
-          fetchNextPage();
-        },
-        function done(err) {
-          if (err) {
-            console.error(err);
-            return;
-          }
-        }
+
+    try {
+      const tableName = "Published Programs";
+      const filterBy = "";
+      const maxRecords = "";
+      const sortField = "Name";
+      const sortDirection = "asc";
+      const records = await fetchRecords(
+        tableName,
+        filterBy,
+        sortField,
+        sortDirection,
+        maxRecords
       );
+      setProgramList(records);
+    } catch (error) {
+      console.error(error);
+    }
+
   };
 
   useEffect(() => {
     getProgramsList()
-  // eslint-disable-next-line react-hooks/exhaustive-deps
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   return (
@@ -99,11 +101,11 @@ function Result() {
                 </button>
               ))
           }
-          
-          </>) : (<Loader/>)
+
+          </>) : (<Loader />)
         }
       </SearchAutoWrapper>
-        <p><i>{programList.length} results published</i></p>  
+      <p><i>{programList.length} results published</i></p>
 
       {heading && <h1>{heading}</h1>}
 
@@ -122,10 +124,10 @@ function Result() {
         </>
       ) : (
         <motion.div
-    animate={{
-      scale: [1, 2, 3, 2, 1],
-    }}
-  >👆🏻</motion.div>
+          animate={{
+            scale: [1, 2, 3, 2, 1],
+          }}
+        >👆🏻</motion.div>
       )}
     </ResultWrapper>
   );

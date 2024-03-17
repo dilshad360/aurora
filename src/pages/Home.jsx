@@ -1,16 +1,12 @@
 import React, { useState, useEffect } from "react";
-import Airtable from "airtable";
-import backendUrl from "../const/backendUrl";
 import GroupCard from "../components/GroupCard";
 import { ListHeader, HomeWrapper } from "../styles/HomeStyle";
 import IndividualCard from "../components/IndividualCard";
 import { motion } from "framer-motion";
 import Loader from "../components/common/Loader";
-import ConfettiExplosion from 'react-confetti-explosion';
+import ConfettiExplosion from "react-confetti-explosion";
+import { fetchRecords } from "../utils/airtableService";
 
-const base = new Airtable({ apiKey: `${backendUrl.secretKey}` }).base(
-  `${backendUrl.airtableBase}`
-);
 
 function Home() {
   const [groups, setGroups] = useState([]);
@@ -29,37 +25,42 @@ function Home() {
   }, []);
 
   const getGroupRank = async () => {
-    base("Group")
-      .select({ view: "Ranking" })
-      .eachPage(
-        (records, fetchNextPage) => {
-          setGroups(records);
-          fetchNextPage();
-        },
-        function done(err) {
-          if (err) {
-            console.error(err);
-            return;
-          }
-        }
+    try {
+      const tableName = "Group";
+      const filterBy = "";
+      const sortField = "Total";
+      const sortDirection = "desc";
+      const records = await fetchRecords(
+        tableName,
+        filterBy,
+        sortField,
+        sortDirection
       );
+      setGroups(records);
+    } catch (error) {
+      console.error(error);
+    }
   };
 
   const getIndividualRank = async () => {
-    base("Participants")
-      .select({ maxRecords: 10, view: "Individual" })
-      .eachPage(
-        (records, fetchNextPage) => {
-          setIndividuals(records);
-          fetchNextPage();
-        },
-        function done(err) {
-          if (err) {
-            console.error(err);
-            return;
-          }
-        }
+    try {
+      const tableName = "Participants";
+      const filterBy = "";
+      const maxRecords = 10;
+      const sortField = "Points";
+      const sortDirection = "desc";
+      const records = await fetchRecords(
+        tableName,
+        filterBy,
+        sortField,
+        sortDirection,
+        maxRecords
       );
+      setIndividuals(records);
+    } catch (error) {
+      console.error(error);
+    }
+
   };
 
   return (
@@ -68,7 +69,9 @@ function Home() {
         <ListHeader>TEAM</ListHeader>
         {groups.length ? (
           <>
-         <center><ConfettiExplosion /></center> 
+            <center>
+              <ConfettiExplosion />
+            </center>
             {groups.map((group, index) => (
               <motion.div
                 key={group.id}
